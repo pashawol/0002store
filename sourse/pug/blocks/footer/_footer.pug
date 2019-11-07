@@ -1,0 +1,17 @@
+mixin footer(p404)
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			+e.logo-wrap.text-center 
+				a(href="#")
+					if p404
+						img(src="img/svg/logo-light-foot.svg", alt="")
+					else
+						img(src="img/svg/logo-foot.svg", alt="")
+			.row
+				.col-xl
+					+soc()
+				.col-auto.order-xl-first
+					+e.text Copyright © 2017 BlaBla
+				.col-auto
+					+e.text
+						a.link-modal(href="#doc-modal") License

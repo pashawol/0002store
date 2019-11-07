@@ -1,0 +1,41 @@
+mixin prod(stock, btn, sl)
+	+b.prod-card
+		+e.img-wrap(href="#")
+			if stock
+				+e.label
+					+e.DIV.count.strong   75
+						span %
+					+e.small-text discount
+			if sl
+				img.res-i(src="img/@0x/card.jpg" data-lazy="img/@2x/card.jpg", alt="")
+			else
+				img.res-i.lazy(src="img/@0x/card.jpg" data-src="img/@2x/card.jpg", alt="")
+		+e.icons
+			img.res-i(src="img/@2x/card-i-1.png", alt="")
+			img.res-i(src="img/@2x/card-i-2.png", alt="")
+			img.res-i(src="img/@2x/card-i-3.png", alt="")
+		.row
+			.col
+				+e.title(href="#") Samsung Galaxy S7 Edge
+			.col-auto
+				+e.price-wrap
+					if stock
+						+e.old-price $100
+					+e.price $35.64
+		if btn
+			a.btn.btn-primary.ttu.mt-1(href="#") Buy for  $25
+
+mixin s-catalog()
+	// start s-catalog
+	+b.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			+e.main-row.row
+				- for (var x = 0; x < 3; x++)
+					.col-lg-4.col-sm-6
+						+prod()
+				.col-lg-4.col-sm-6
+					+prod("stock")
+				- for (var x = 0; x < 2; x++)
+					.col-lg-4.col-sm-6
+						+prod()
+	// end s-catalog

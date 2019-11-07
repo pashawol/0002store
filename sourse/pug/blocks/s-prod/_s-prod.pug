@@ -1,0 +1,33 @@
+mixin s-prod()
+	// start s-prod
+	+b.SECTION.s-prod.section#s-prod&attributes(attributes)
+		.container
+			+e.img-wrap
+				+b.label-prod
+					+e.item
+						+e.DIV.count.strong   75
+							span %
+						+e.small-text discount
+					
+					+e.item
+						+e.sm-text Old price
+						.h6.fw-300 $35
+					
+					+e.item.strong
+						+e.sm-text.strong You save
+						+e.DIV.count.strong  $15 
+					
+				img.res-i.lazy(src="img/@0x/2-layers.jpg" data-src="img/@2x/2-layers.jpg", alt="")
+			
+			.text-center 
+				h3 Headline
+				p Whether you are an indie developer, big publisher, or news contributor, you'll want to make a presentation of your product as attractive as possible - and these mockups are designed specifically to beautify your presentation's visual appearance. Whether you are an indie developer, big publisher, or news contributor, you'll want to. 
+			+e.img-wrap
+				img.res-i.lazy(src="img/@0x/2-layers.jpg" data-src="img/@2x/2-layers.jpg", alt="")
+			
+			+e.img-wrap
+				img.res-i.lazy(src="img/@0x/2-layers.jpg" data-src="img/@2x/2-layers.jpg", alt="")
+			.text-center 
+				h3 Product name
+				a.btn.btn-primary(href="#") Buy for  $25
+	// end s-prod

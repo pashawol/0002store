@@ -1,0 +1,45 @@
+
+mixin mob-mnu()
+	+b.toggle-menu-mobile--js.d-lg-none
+		span
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+		
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row
+				.col
+					+e.logo-wrap
+						a(href="#")
+							img(src="img/svg/logo.svg", alt="")
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
+				+e.menu-wrap--js.col-lg-auto
+					+mnu()
+					
+	// end top-nav
+mixin top-nav-page() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row
+				+e.col.col-lg-auto.col
+					+e.logo-wrap
+						a(href="#")
+							img(src="img/svg/logo.svg", alt="")
+				+e.menu-wrap--js.col-lg.order-lg-0.order-last
+					+mnu2()
+				+e.col.col-auto.text-right
+					a.btn.btn-primary(href="#") Buy for  $25
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
+	// end top-nav

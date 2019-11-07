@@ -1,0 +1,51 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-prod-body/_s-prod-body.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+header() 
+		+top-nav-page()
+	+header-block-page()
+	+s-prod
+	+s-prod-body
+	// start s-catalog
+	+b.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			+e.title-wrap
+				.row
+					.col-auto
+						img(src="img/svg/icon.svg", alt="")
+					.col
+						h3.strong Separate products
+						p Here You can buy separate products from this set for specific purposes.
+			+e.main-row.row
+				- for (var x = 0; x < 3; x++)
+					.col-lg-4.col-sm-6
+						+prod("","btn")
+
+				.col-lg-4.col-sm-6
+					+prod("stock","btn")
+
+				- for (var x = 0; x < 2; x++)
+					.col-lg-4.col-sm-6
+						+prod("","btn")
+			hr.mt-5
+			+e.title-wrap.text-center.pt-5
+				h3.strong Other popular products
+			+e.slider--js
+				- for (var x = 0; x < 6; x++)
+					+e.slide
+						+prod("")
+	// end s-catalog 
+ 
+	+footer()
