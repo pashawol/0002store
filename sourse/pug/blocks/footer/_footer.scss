@@ -3,10 +3,10 @@
   @include media-breakpoint-up(md) {
 
     // margin-top: rem(38px);
-    padding-bottom: rem(85);
+    padding-bottom: rem(65);
   }
   margin-top: rem(38px);
-  padding-bottom: rem(85 / 2);
+  padding-bottom: rem(65 / 2);
   .row{
     @include media-breakpoint-up(md) {
 
@@ -40,6 +40,9 @@
       margin-bottom: 0;
     }
     margin-bottom: rem(30);
+  }
+  &__text.text-center{
+    padding-top: rem(30px);
   }
 // 
 @include media-breakpoint-up(xl) {}
