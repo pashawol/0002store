@@ -2,6 +2,9 @@
 	background-color: transparent !important;
 	position: absolute !important;
 }
+body:not(.home-page) .top-nav {
+	background-color: #ffffff;
+}
 .top-nav {
 	 img{
 		max-width: 100%;
@@ -45,7 +48,10 @@
 	}
 	ul{
 		list-style-type: none;
-		display: flex;
+		@include media-breakpoint-up(md) {
+
+			display: flex;
+		}
 		justify-content: center;
 		@include media-breakpoint-up(md) {
 
