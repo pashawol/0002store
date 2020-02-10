@@ -1,56 +1,82 @@
 .s-form {
-	.form-wrap{
-		max-width: 800px;
+	.form-wrap {
+		max-width: rem(800);
 		// border-radius: 5px;
 		// background-color: $light;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
-		&__btn{
+
+
+		&__btn {
+			border-radius: 100px;
+			padding: .88rem 1.22222rem;
+			font-weight: 600;
+
 			@include media-breakpoint-up(sm) {
 
 				position: absolute;
 				right: rem(10);
 				top: rem(10);
-				width: inherit;
+				font-size: 1.375rem;
+				// width: inherit;
+				width: rem(200);
 			}
+
 			width: 100%;
 		}
-		&__input{
-			padding-left: rem(70);
+
+		&__input {
+			border-radius: 100px;
+			padding-left: rem(80);
+
 			@include media-breakpoint-up(sm) {
 				height: inherit;
 
-				padding: rem(30) rem(90) rem(30) rem(72);
+				padding: rem(26) rem(220) rem(26) rem(72);
 			}
+
 			background-image: url(../img/svg/email.svg);
 			background-position: rem(30) 50%;
 			background-repeat: no-repeat;
 		}
 	}
+
 	//
 	@include media-breakpoint-up(xl) {}
+
 	@include media-breakpoint-up(lg) {}
+
 	@include media-breakpoint-up(md) {}
+
 	@include media-breakpoint-up(sm) {}
+
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
+	@include media-breakpoint-between(md, xl) {}
+
+
 	//
 	@include media-breakpoint-only(xs) {}
+
 	@include media-breakpoint-only(sm) {}
+
 	@include media-breakpoint-only(md) {}
+
 	@include media-breakpoint-only(lg) {}
+
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
+
 	@include media-breakpoint-down(lg) {}
+
 	@include media-breakpoint-down(md) {}
+
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+
+	@include media-breakpoint-down(xs) {}
 
 }

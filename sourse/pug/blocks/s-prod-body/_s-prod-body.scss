@@ -1,44 +1,64 @@
 .s-prod-body {
 	padding-top: rem(80);
 	padding-bottom: rem(80);
-	table{
-	width: 100%;
-	border-bottom: 1px solid #d4dae3;
-	@extend .h6;
-	font-weight: 300;
-	margin-bottom: rem(50);
-	td{
-		padding: rem(40) 0;
-		padding-right: rem(10);
+
+
+	h3 {
+		@extend .h6;
+		margin-bottom: rem(0);
 	}
+
+	table {
+		width: 100%;
+		border-bottom: 1px solid #d4dae3;
+		@extend .h6;
+		font-weight: 400;
+		margin-bottom: rem(30);
+
+		td {
+			padding: rem(20) 0 rem(30);
+			padding-right: rem(10);
+		}
 	}
-		 
+
 	@include media-breakpoint-up(xl) {}
+
 	@include media-breakpoint-up(lg) {
-		.container{
+		.container {
 			max-width: rem(800);
 		}
 	}
+
 	@include media-breakpoint-up(md) {}
+
 	@include media-breakpoint-up(sm) {}
+
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
+	@include media-breakpoint-between(md, xl) {}
+
+
 	//
 	@include media-breakpoint-only(xs) {}
+
 	@include media-breakpoint-only(sm) {}
+
 	@include media-breakpoint-only(md) {}
+
 	@include media-breakpoint-only(lg) {}
+
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
+
 	@include media-breakpoint-down(lg) {}
+
 	@include media-breakpoint-down(md) {}
+
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+
+	@include media-breakpoint-down(xs) {}
 
 }

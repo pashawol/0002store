@@ -1,77 +1,127 @@
 .s-catalog {
-		 
-	&__main-row{
+
+	&__main-row {
 		@include media-breakpoint-up(xl) {
 
 			@include roww(85 / 2);
 		}
 	}
-	&__title-wrap{
-		.row{
+
+	&__title-wrap {
+		.row {
 			align-items: center;
 		}
+
 		margin-bottom: rem(90);
-		p{
+
+		p {
 			font-size: rem(20);
 		}
 	}
-	&__slider{
+
+	&__slider {
 		@include media-breakpoint-up(xl) {
-		margin-left: rem(-85 / 2);
-		margin-right: rem(-85 / 2);
+			margin-left: rem(-85 / 2);
+			margin-right: rem(-85 / 2);
+		}
+
+		margin-left: rem(-15);
+		margin-right: rem(-15);
 	}
-	margin-left: rem(-15);
-	margin-right: rem(-15);
-}
-	&__slide{
+
+	&__slide {
 		@include media-breakpoint-up(xl) {
 			padding-left: rem(85 / 2);
 			padding-right: rem(85 / 2);
 		}
+
 		padding-left: rem(15);
 		padding-right: rem(15);
-		
+
+	}
+
+	.slick-arrow {
+		@include media-breakpoint-up(xl) {
+
+			margin-top: rem(-70);
+		}
+
+		@include media-breakpoint-up(lg) {
+
+			margin-top: rem(-55);
+		}
+
+		@include media-breakpoint-up(md) {
+
+			margin-top: rem(-45);
+		}
+
+		margin-top: rem(-55);
+
+		// top: 0;
+		&.r {
+			right: -5px;
+		}
+
+		&.l {
+			left: -5px;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
+
 	@include media-breakpoint-up(lg) {}
+
 	@include media-breakpoint-up(md) {}
+
 	@include media-breakpoint-up(sm) {}
+
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
+	@include media-breakpoint-between(md, xl) {}
+
+
 	//
 	@include media-breakpoint-only(xs) {}
+
 	@include media-breakpoint-only(sm) {}
+
 	@include media-breakpoint-only(md) {}
+
 	@include media-breakpoint-only(lg) {}
+
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
+
 	@include media-breakpoint-down(lg) {}
+
 	@include media-breakpoint-down(md) {}
+
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+
+	@include media-breakpoint-down(xs) {}
 
 }
 
-.prod-card{
+.prod-card {
 	@include media-breakpoint-up(xl) {
 
 		margin-bottom: rem(72);
 	}
+
 	margin-bottom: rem(30);
 	@include rfs(rem(22));
-	&__icons{
-		img{
+
+	&__icons {
+		img {
 			margin-right: 3px;
 		}
 	}
-	&__img-wrap{
+
+	&__img-wrap {
 		display: block;
 		border-radius: 2px;
 		border: 1px solid rgba(49, 64, 86, 0.15);
@@ -83,13 +133,39 @@
 		position: relative;
 		overflow: hidden;
 		text-align: center;
-		img{
+		@include block(311, 207);
+		border-radius: 10px;
 
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #d4dae3;
+			z-index: 2;
+			opacity: 0;
+			@include mt;
+		}
+
+		&:hover {
+			&::before {
+				opacity: .3;
+			}
+		}
+
+		img {
+			@include mt;
+			position: absolute;
+			left: 0;
+			top: 0;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
-		&::before{
+
+		&::after {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -100,31 +176,37 @@
 			opacity: 0;
 			@include mt;
 		}
-		&:hover{
-			&::before{
+
+		&:hover {
+			&::before {
 				opacity: 0.3;
 
 			}
 		}
 	}
-	&__title{
+
+	&__title {
 		@extend .text-body;
-		font-weight: 300;
+		// font-weight: 600;
 		line-height: 1;
+		text-decoration: none !important;
 	}
-	&__price{
+
+	&__price {
 		color: $primary;
 		font-weight: 600;
 	}
-	 &__old-price{
-		 position: absolute;
-		 right: 0;
-		 bottom: 1.5em;
-		 color: $secondary;
-		 font-size: rem(16);
-		 text-decoration: line-through;
-	 }
-	 &__label{
+
+	&__old-price {
+		position: absolute;
+		right: 0;
+		bottom: 1.5em;
+		color: $secondary;
+		font-size: rem(16);
+		text-decoration: line-through;
+	}
+
+	&__label {
 		width: rem(60px);
 		height: rem(60px);
 		background-color: $primary;
@@ -138,21 +220,25 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		box-shadow:0  0 0 rem(10) rgba($color: $primary, $alpha: .5);
+		box-shadow: 0 0 0 rem(10) rgba($color: $primary, $alpha: .5);
 		font-weight: bold;
-	 }
-	 &__count{
-		 @include rfs(rem(26));
-		 line-height: 1;
-		 span{
-			 font-size: rem(15);
-		 }
-	 }
-	 &__small-text{
-		 font-size: rem(8);
-		 text-transform: uppercase;
-	 }
-	 &__price-wrap{
-		 position: relative;
-	 }
+	}
+
+	&__count {
+		@include rfs(rem(26));
+		line-height: 1;
+
+		span {
+			font-size: rem(15);
+		}
+	}
+
+	&__small-text {
+		font-size: rem(8);
+		text-transform: uppercase;
+	}
+
+	&__price-wrap {
+		position: relative;
+	}
 }

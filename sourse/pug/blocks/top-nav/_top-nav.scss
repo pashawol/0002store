@@ -1,37 +1,42 @@
-.page-404 .top-nav{
+.page-404 .top-nav {
 	background-color: transparent !important;
 	position: absolute !important;
 }
+
 body:not(.home-page) .top-nav {
 	background-color: #ffffff;
 }
+
 .top-nav {
-	 img{
+	img {
 		max-width: 100%;
 		height: auto;
-	 }
-	@include mt; 
+	}
+
+	@include mt;
 	top: 0;
 	left: 0;
 	width: 100%;
 	position: absolute;
+
 	@include media-breakpoint-up(sm) {
 
 		padding-top: rem(37);
 		padding-bottom: rem(37);
 	}
+
 	padding-top: rem(17);
 	padding-bottom: rem(17);
 	z-index: 200;
 
-	&.fixed { 
+	&.fixed {
 		bottom: auto;
 		margin-top: 0;
 		background-color: #fcfcfc;
 		padding-top: rem(17);
 		padding-bottom: rem(17);
 		position: fixed;
-	
+
 	}
 
 	&__nav {
@@ -43,43 +48,53 @@ body:not(.home-page) .top-nav {
 		display: inline-block;
 		list-style-type: none;
 	}
-	.row{
+
+	.row {
 		align-items: center;
 	}
-	ul{
+
+	ul {
 		list-style-type: none;
+
 		@include media-breakpoint-up(md) {
 
 			display: flex;
 		}
+
 		justify-content: center;
+
 		@include media-breakpoint-up(md) {
 
 			margin-left: rem(-15px);
 			margin-right: rem(-15px);
 		}
+
 		margin-left: rem(-5px);
 		margin-right: rem(-5px);
 		margin-bottom: 0;
-		a{
-			font-weight: 300;
+
+		a {
+			font-weight: 600;
+
 			@include media-breakpoint-up(md) {
 
 				margin-left: rem(15px);
 				margin-right: rem(15px);
 			}
+
 			margin-left: rem(5px);
 			margin-right: rem(5px);
 			color: $body-color;
 			text-decoration: none !important;
-			&:hover{
+
+			&:hover {
 				color: $primary;
 			}
 		}
 	}
 
 
-	&__col{
+	&__col {
 		@include media-breakpoint-up(lg) {
 
 			width: rem(248 + 30);
@@ -87,15 +102,21 @@ body:not(.home-page) .top-nav {
 
 	}
 
-	&__menu-wrap{
+	&__menu-wrap {
 		@include media-breakpoint-up(lg) {
 
 			display: block !important;
 			padding-top: 0;
 		}
+
 		padding-top: 10px;
 		display: none;
 	}
+
+	&__logo-wrap {
+		max-width: rem(190);
+	}
+
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -105,9 +126,7 @@ body:not(.home-page) .top-nav {
 
 	@include media-breakpoint-up(sm) {}
 
-	@include media-breakpoint-up(xs) {
-	
-	}
+	@include media-breakpoint-up(xs) {}
 
 	// 
 	@include media-breakpoint-between(md, xl) {}
@@ -133,13 +152,18 @@ body:not(.home-page) .top-nav {
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {
-		&__logo-wrap{
-			a{
+		.menu-item {
+			font-size: 18px;
+		}
+
+		&__logo-wrap {
+			a {
 				width: rem(60);
 				position: relative;
 				overflow: hidden;
 				display: block;
-				img{
+
+				img {
 					// width: auto;
 					max-width: none;
 

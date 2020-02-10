@@ -1,78 +1,93 @@
- 
-	  
-.soc{
-	margin-left: auto;
-	margin-right: auto;
-	justify-content: space-between;
+ .soc {
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	justify-content: space-between;
 
-	display: flex;
-	align-items: center;
-	&__item{
-		text-decoration: none !important;
-		margin: 0 rem(5px);
-		vertical-align: middle;
-		@include mt;
-		// display: block;
-		display: flex;
-		align-items: center;
-		&:hover{
-		  
-		}
-		
-	}
-	&__text{
-		color: $body-color;
-	}
-	.icon{
-	font-size: rem(30);
-	margin-right: rem(10);
-	color: $secondary;
-	flex-shrink: 0;
-	@include mt;
-	&-email{
-		font-size: rem(23); 
-	}
-	&-twitter{
-		font-size: rem(25);
-	}
-	&-be{
-		font-size: rem(19);
-	}
-	}
-	&__item:hover{
-		.icon{
-			&-fb{
-				color: #4e66a9;
-			}
-			&-twitter{
-				color: #40a0f1;
-			}
-			&-be{ 
-				color: #2c53fd;
-			}
-			&-insta{
-				fill: url(#insta-gradient);
-			}
-			&-drib{
-				color: #ec51b7;
-			}
-			&-email{
-				color: $primary;
-			}
-		}
-	}
+ 	display: flex;
+ 	align-items: center;
 
-}
- 
+ 	&__item {
+ 		text-decoration: none !important;
+ 		margin: 0 rem(5px);
+ 		vertical-align: middle;
+ 		@include mt;
+ 		// display: block;
+ 		display: flex;
+ 		align-items: center;
 
-.counter{
-	counter-reset: num;
-	&__item {
-		position: relative; 
-		&::before {
-			content: counter(num);
-			counter-increment: num;
-		}
-	}
-}
+ 		&:hover {}
 
+ 	}
+
+ 	&__text {
+ 		color: $body-color;
+ 	}
+
+ 	.icon {
+ 		font-size: rem(30);
+
+ 		@include media-breakpoint-up(md) {
+
+ 			margin-right: rem(10);
+ 		}
+
+ 		color: $secondary;
+ 		flex-shrink: 0;
+ 		@include mt;
+
+ 		&-email {
+ 			// font-size: rem(23);
+ 		}
+
+ 		&-twitter {
+ 			font-size: rem(25);
+ 		}
+
+ 		&-be {
+ 			// font-size: rem(19);
+ 		}
+ 	}
+
+ 	&__item:hover {
+ 		.icon {
+ 			&-fb {
+ 				color: #4e66a9;
+ 			}
+
+ 			&-twitter {
+ 				color: #40a0f1;
+ 			}
+
+ 			&-be {
+ 				color: #2c53fd;
+ 			}
+
+ 			&-insta {
+ 				fill: url(#insta-gradient);
+ 			}
+
+ 			&-drib {
+ 				color: #ec51b7;
+ 			}
+
+ 			&-email {
+ 				color: $primary;
+ 			}
+ 		}
+ 	}
+
+ }
+
+
+ .counter {
+ 	counter-reset: num;
+
+ 	&__item {
+ 		position: relative;
+
+ 		&::before {
+ 			content: counter(num);
+ 			counter-increment: num;
+ 		}
+ 	}
+ }
